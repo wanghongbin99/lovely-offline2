@@ -1,0 +1,33 @@
+{
+    "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+    "index": "/index.html",
+    "assetGroups": [{
+        "name": "app",
+        "installMode": "prefetch",
+        "resources": {
+            "files": [
+                "/favicon.ico",
+                "/index.html",
+                "/manifest.webmanifest",
+                "/*.css",
+                "/*.js"
+            ],
+            "urls": [
+                https: //fonts.googleapis.com/icon?family=Material+Icons,
+                https: //fonts.googleapis.com/css?family=Roboto:300,400,500,
+                https: //fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2,
+                https: //fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-VdgIuiaDsNcIhQ8tQ.woff2
+            ]
+        }
+    }, {
+        "name": "assets",
+        "installMode": "lazy",
+        "updateMode": "prefetch",
+        "resources": {
+            "files": [
+                "/assets/**",
+                "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+            ]
+        }
+    }]
+}
